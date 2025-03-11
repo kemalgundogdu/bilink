@@ -1,0 +1,113 @@
+@import "tailwindcss";
+
+@theme {
+  --bilink-background: #E8E8E8;
+
+  --bilink-primary: #2A6F97;
+  --bilink-primary-100: #E6F0FA;
+  --bilink-primary-200: #A3CFFA;
+  --bilink-primary-300: #6B9AC4;
+
+  --bilink-secondary: #F4A261;
+  --bilink-secondary-100: #FBE9D0;
+  --bilink-secondary-200: #F7C78A;
+
+  --bilink-accent: #D9A7B1;
+  --bilink-accent-100: #F5E1E5;
+
+  --bilink-dark: #1A2E44;
+  --bilink-dark-900: #0F1A2A;
+
+}
+
+body {
+  background: var(--bilink-background);
+}
+
+.bg-bilink-primary {
+  background: var(--bilink-primary);
+}
+
+.bg-bilink-primary-100 {
+  background: var(--bilink-primary-100);
+}
+
+.bg-bilink-primary-200 {
+  background: var(--bilink-primary-200);
+}
+
+.bg-bilink-primary-300 {
+  background: var(--bilink-primary-300);
+}
+
+.text-bilink-primary {
+  color: var(--bilink-primary);
+}
+
+.text-bilink-primary-100 {
+  color: var(--bilink-primary-100);
+}
+
+.text-bilink-primary-200 {
+  color: var(--bilink-primary-200);
+}
+
+.text-bilink-primary-300 {
+  color: var(--bilink-primary-300);
+}
+
+.bg-bilink-secondary {
+  background: var(--bilink-secondary);
+}
+
+.bg-bilink-secondary-100 {
+  background: var(--bilink-secondary-100);
+}
+
+.bg-bilink-secondary-200 {
+  background: var(--bilink-secondary-200);
+}
+
+.text-bilink-secondary {
+  color: var(--bilink-secondary);
+}
+
+.text-bilink-secondary-100 {
+  color: var(--bilink-secondary-100);
+}
+
+.text-bilink-secondary-200 {
+  color: var(--bilink-secondary-200);
+}
+
+.bg-bilink-accent {
+  background: var(--bilink-accent);
+}
+
+.bg-bilink-accent-100 {
+  background: var(--bilink-accent-100);
+}
+
+.text-bilink-accent {
+  color: var(--bilink-accent);
+}
+
+.text-bilink-accent-100 {
+  color: var(--bilink-accent-100);
+}
+
+.bg-bilink-dark {
+  background: var(--bilink-dark);
+}
+
+.bg-bilink-dark-900 {
+  background: var(--bilink-dark-900);
+}
+
+.text-bilink-dark {
+  color: var(--bilink-dark);
+}
+
+.text-bilink-dark-900 {
+  color: var(--bilink-dark-900);
+}
