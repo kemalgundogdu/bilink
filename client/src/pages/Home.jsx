@@ -41,7 +41,7 @@ function Home() {
         <div className="mt-10">
           <div className="flex flex-col gap-5 mt-5 w-full">
             {/* title */}
-            <h1 className="text-xl uppercase text-cyan-300 w-full text-center">Useful Links</h1>
+            <h1 className="text-md uppercase text-cyan-300 w-full text-center">Useful Links</h1>
             {/* links */}
             <Link
               to={"https://roadmap.sh/"}
@@ -65,7 +65,7 @@ function Home() {
               Social Media Management Training 📚
             </Link>
             {/* title */}
-            <h1 className="text-xl uppercase text-cyan-300 w-full text-center">last posts</h1>
+            <h1 className="text-md uppercase text-cyan-300 w-full text-center">last posts</h1>
             {/* links */}
             <Link
               to={"https://roadmap.sh/"}
@@ -82,7 +82,7 @@ function Home() {
               First Expo Project 🚀
             </Link>
             {/* title */}
-            <h1 className="text-xl uppercase text-cyan-300 w-full text-center">show your support</h1>
+            <h1 className="text-md uppercase text-cyan-300 w-full text-center">show your support</h1>
             {/* links */}
             <Link
               to={"https://roadmap.sh/"}
