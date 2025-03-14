@@ -8,6 +8,7 @@ import dbConnect from "./config/dbConnect.js";
 // routes
 import userRoutes from "./routes/userRoutes.js";
 import authRoutes from "./routes/authRoutes.js";
+import profileRoutes from "./routes/profileRoutes.js";
 
 console.log('MONGO_URI:', process.env.MONGO_URI);
 
@@ -23,6 +24,7 @@ app.get("/", (req, res) => {
 // routes
 app.use("/api/auth", authRoutes);
 app.use("/api/user", userRoutes);
+app.use("/api/profile", profileRoutes);
 
 dbConnect().catch(err => console.error('Failed to connect to MongoDB:', err));
 app.listen(3000, () => {

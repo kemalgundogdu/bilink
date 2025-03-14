@@ -1,6 +1,7 @@
 import jwt from "jsonwebtoken";
 import User from "../models/userModel.js";
-
+import bcrypt from "bcrypt";
+import { createAccessToken, createRefreshToken } from "../utils/auth.js";
 
 // register
 export const register = async (req, res) => {
@@ -52,7 +53,7 @@ export const login = async (req, res) => {
     });
     const { password: pass, ...other } = user._doc;
     res.status(200).json({ ...other, accessToken });
-  } catch (error) {
+  } catch (err) {
     res.status(500).json({ error: "Something went wrong" });
   }
 };
