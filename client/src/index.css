@@ -4,6 +4,10 @@
   --font-poppins: 'Poppins', sans-serif;
 }
 
-body {
+.defaultThemeBody {
   @apply bg-gradient-to-br from-[#264058] to-[#192837] min-h-screen text-[#f4fbfd] font-poppins;
+}
+
+.landingThemeBody {
+  @apply bg-[#f6f6f6] min-h-screen text-[#f4fbfd] font-poppins p-3;
 }
