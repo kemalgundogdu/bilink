@@ -10,8 +10,6 @@ import userRoutes from "./routes/userRoutes.js";
 import authRoutes from "./routes/authRoutes.js";
 import profileRoutes from "./routes/profileRoutes.js";
 
-console.log('MONGO_URI:', process.env.MONGO_URI);
-
 const app = express();
 app.use(express.json());
 app.use(cors());

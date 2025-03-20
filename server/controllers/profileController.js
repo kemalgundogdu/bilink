@@ -4,8 +4,11 @@ import User from "../models/userModel.js";
 // one profile
 export const oneProfile = async (req, res) => {
   try {
-    const { id } = req.params;
-    const profile = await Profile.findById(id);
+    const { username } = req.params;
+    const profile = await Profile.findOne({ username });
+    if (!profile) {
+      return res.status(404).json({ error: "Profile not found" });
+    }
     res.status(200).json(profile);
   } catch (error) {
     res.status(500).json({ error: "Something went wrong" });
@@ -20,8 +23,9 @@ export const createProfile = async (req, res) => {
       return res.status(400).json({ error: "All input is required" });
 
     const userId = req.user.id;
-    if (!userId) return res.status(400).json({ error: "Unauthorized" });
-    
+    const username = req.user.username;
+    if (!userId || !username)
+      return res.status(400).json({ error: "Unauthorized" });
 
     // user control
     const user = await User.findById(userId);
@@ -31,11 +35,14 @@ export const createProfile = async (req, res) => {
     // profile control
     const existingProfile = await Profile.findOne({ userId });
     if (existingProfile) {
-      return res.status(400).json({ error: "Profile already exists for this user" });
+      return res
+        .status(400)
+        .json({ error: "Profile already exists for this user" });
     }
 
     const newProfile = new Profile({
       userId,
+      username,
       socialMedias,
       links,
       theme,
