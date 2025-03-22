@@ -7,7 +7,6 @@ import { PiLightningFill, PiStarFill } from "react-icons/pi";
 function Home() {
   useEffect(() => {
     document.title = "Bilink - Home";
-    document.body.classList.add("landingThemeBody");
   }, []);
   return (
     <>
@@ -42,25 +41,25 @@ function Home() {
                 href="#features"
                 className="text-lg font-extrabold text-green-800 hover:text-green-600 transition-transform hover:scale-110"
               >
-                Features
+                Özellikler
               </Link>
               <Link
                 href="#testimonials"
                 className="text-lg font-extrabold text-green-800 hover:text-green-600 transition-transform hover:scale-110"
               >
-                Testimonials
+                Referanslar
               </Link>
               <Link
                 href="#pricing"
                 className="text-lg font-extrabold text-green-800 hover:text-green-600 transition-transform hover:scale-110"
               >
-                Pricing
+                Fiyatlandırma
               </Link>
               <Link
                 href="#faq"
                 className="text-lg font-extrabold text-green-800 hover:text-green-600 transition-transform hover:scale-110"
               >
-                FAQ
+                SSS
               </Link>
             </nav>
 
@@ -70,7 +69,7 @@ function Home() {
             {/* CTA button */}
             <div className="hidden md:block">
               <button className="cursor-pointer bg-yellow-400 hover:bg-yellow-500 text-green-800 font-extrabold text-lg rounded-full px-6 py-6 border-4 border-green-800 shadow-[4px_4px_0px_0px_rgba(22,101,52,1)] transition-transform hover:translate-y-1 hover:shadow-[4px_2px_0px_0px_rgba(22,101,52,1)]">
-                Get Started!
+                Ücretsiz Başla
               </button>
             </div>
           </div>
@@ -90,8 +89,7 @@ function Home() {
                     clipPath:
                       "polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)",
                   }}
-                >
-                </div>
+                ></div>
               </div>
 
               <div className="grid gap-6 lg:grid-cols-2 lg:gap-12">
@@ -99,33 +97,34 @@ function Home() {
                   <div className="space-y-2">
                     <div className="inline-flex items-center rounded-full bg-yellow-400 px-4 py-2 text-lg font-extrabold text-green-800 border-4 border-green-800 shadow-[4px_4px_0px_0px_rgba(22,101,52,1)]">
                       <PiLightningFill className="mr-2 h-5 w-5 fill-current" />{" "}
-                      Super New!
+                      Çok Hızlı
                     </div>
                     <h1
                       className="text-4xl md:text-6xl font-extrabold tracking-tighter text-green-800"
                       style={{ textShadow: "3px 3px 0px #86efac" }}
                     >
-                      lorem ipsum dolar sit amet
+                      Her şey için tek bir sayfa yeter
                     </h1>
                     <div className="relative">
                       <div className="comic-bubble bg-white border-4 border-green-800 p-4 rounded-[30px] shadow-[8px_8px_0px_0px_rgba(22,101,52,1)]">
                         <p className="text-xl text-green-800 font-bold">
-                          lorem ipsum dolar sit amet lorem ipsum dolar sit amet
-                          lorem ipsum dolar sit amet lorem ipsum dolar sit amet
-                          lorem ipsum dolar sit amet
+                          Instagram, TikTok, Twitter, YouTube ve diğer sosyal
+                          medya profillerinizden yarattığınız, düzenlediğiniz ve
+                          sattığınız her şeyi paylaşmanıza yardımcı olacak tek
+                          bir bağlantı.
                         </p>
                       </div>
                     </div>
                   </div>
                   <div className="flex flex-col gap-4 sm:flex-row pt-6">
                     <button className="cursor-pointer bg-green-500 hover:bg-green-600 text-white font-extrabold text-xl rounded-full px-8 py-8 border-4 border-green-800 shadow-[6px_6px_0px_0px_rgba(22,101,52,1)] transition-transform hover:translate-y-1 hover:shadow-[6px_4px_0px_0px_rgba(22,101,52,1)]">
-                      Start Creating Now!
+                      Ücretsiz Başlayın
                     </button>
                     <button
                       variant="outline"
                       className="cursor-pointer bg-yellow-300 hover:bg-yellow-400 text-green-800 font-extrabold text-xl rounded-full px-8 py-8 border-4 border-green-800 shadow-[6px_6px_0px_0px_rgba(22,101,52,1)] transition-transform hover:translate-y-1 hover:shadow-[6px_4px_0px_0px_rgba(22,101,52,1)]"
                     >
-                      Watch Demo
+                      Örnek Profil
                     </button>
                   </div>
                 </div>
@@ -159,16 +158,17 @@ function Home() {
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <div className="inline-block rounded-full bg-yellow-400 px-4 py-2 text-xl font-extrabold text-green-800 border-4 border-green-800 shadow-[4px_4px_0px_0px_rgba(22,101,52,1)]">
-                  Super Features!
+                  Özellikler
                 </div>
                 <h2
                   className="text-3xl md:text-5xl font-extrabold tracking-tighter text-white"
                   style={{ textShadow: "3px 3px 0px #16a34a" }}
                 >
-                  lorem ipsum dolar sit amet
+                  Bilink ile Neler Yapabilirsiniz?
                 </h2>
                 <p className="max-w-[900px] text-xl text-white font-bold md:text-2xl">
-                  lorem ipsum dolar sit amet lorem ipsum dolar sit amet
+                  Tüm Bağlantılarınızı Tek Bir Yerde Toplayın ve Kolayca
+                  Paylaşın!
                 </p>
               </div>
             </div>
@@ -179,12 +179,12 @@ function Home() {
                   <div className="rounded-full bg-green-500 p-3 text-white border-4 border-green-800">
                     <PiLightningFill className="h-6 w-6 fill-current stroke-green-800 stroke-2" />
                   </div>
-                  <h3 className="text-2xl font-extrabold text-green-800">
-                    Super Easy!
+                  <h3 className="text-2xl font-extrabold text-green-800 text-center">
+                    Tek Link ile Her Şeyi Paylaşın
                   </h3>
                   <p className="text-center text-green-800 font-bold">
-                    lorem ipsum dolar sit amet lorem ipsum dolar sit amet lorem
-                    ipsum dolar sit amet
+                    Sosyal medya ve favori linklerinizi gruplar halinde
+                    düzenleyin ve paylaşın.
                   </p>
                 </div>
               </div>
@@ -194,12 +194,12 @@ function Home() {
                   <div className="rounded-full bg-green-500 p-3 text-white border-4 border-green-800">
                     <PiLightningFill className="h-6 w-6 fill-current stroke-green-800 stroke-2" />
                   </div>
-                  <h3 className="text-2xl font-extrabold text-green-800">
-                    Super Easy!
+                  <h3 className="text-2xl font-extrabold text-green-800 text-center">
+                    Tarzınızı Yansıtan Profiller Oluşturun
                   </h3>
                   <p className="text-center text-green-800 font-bold">
-                    lorem ipsum dolar sit amet lorem ipsum dolar sit amet lorem
-                    ipsum dolar sit amet
+                    Temanızı seçin ve AI destekli önerilerle markanıza özel bir
+                    profil yapın.
                   </p>
                 </div>
               </div>
@@ -209,12 +209,12 @@ function Home() {
                   <div className="rounded-full bg-green-500 p-3 text-white border-4 border-green-800">
                     <PiLightningFill className="h-6 w-6 fill-current stroke-green-800 stroke-2" />
                   </div>
-                  <h3 className="text-2xl font-extrabold text-green-800">
-                    Super Easy!
+                  <h3 className="text-2xl font-extrabold text-green-800 text-center">
+                    Tıklama Analizleriyle Kitlenizi Tanıyın
                   </h3>
                   <p className="text-center text-green-800 font-bold">
-                    lorem ipsum dolar sit amet lorem ipsum dolar sit amet lorem
-                    ipsum dolar sit amet
+                    Link tıklamalarını analiz edin ve içerik stratejinizi
+                    büyütmek için optimize edin.
                   </p>
                 </div>
               </div>
@@ -242,17 +242,16 @@ function Home() {
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <div className="inline-block rounded-full bg-yellow-400 px-4 py-2 text-xl font-extrabold text-green-800 border-4 border-green-800 shadow-[4px_4px_0px_0px_rgba(22,101,52,1)]">
-                  Happy Users!
+                  Referanslar
                 </div>
                 <h2
                   className="text-3xl md:text-5xl font-extrabold tracking-tighter text-green-800"
                   style={{ textShadow: "3px 3px 0px #86efac" }}
                 >
-                  What Our Users Say
+                  Kullanıcılarımız bizim için ne söylüyor?
                 </h2>
                 <p className="max-w-[900px] text-xl text-green-800 font-bold md:text-2xl">
-                  Don't just take our word for it - hear from our super happy
-                  users!
+                  Kullanıcılarımızın Deneyimlerini Keşfedin ve İlham Alın
                 </p>
               </div>
             </div>
@@ -270,9 +269,8 @@ function Home() {
                     </div>
                     <div className="comic-bubble bg-green-100 border-4 border-green-800 p-4 rounded-[20px] relative">
                       <p className="text-green-800 font-bold">
-                        "lorem ipsum lorem ipsum dolar sit amet lorem ipsum
-                        dolar sit amet lorem ipsum dolar sit amet lorem ipsum
-                        dolar sit amet lorem ipsum dolar sit amet"
+                        "Bilink ile tüm sosyal medya linklerimi tek bir yerde
+                        topladım, çok pratik!"
                       </p>
                       <div className="absolute -bottom-4 -left-4 w-8 h-8 bg-green-100 border-r-4 border-b-4 border-green-800 transform rotate-45"></div>
                     </div>
@@ -283,13 +281,51 @@ function Home() {
                         src="https://placehold.co/64"
                         width={64}
                         height={64}
-                        alt="Kemal G."
+                        alt="Ayşe K."
                         className="h-full w-full object-cover"
                       />
                     </div>
                     <div>
                       <p className="font-extrabold text-xl text-green-800">
-                        Kemal G.
+                        Ayşe K.
+                      </p>
+                      <p className="text-green-700 font-bold">Influencer</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="group relative">
+                <div className="absolute inset-0 bg-green-300 rounded-[30px] border-4 border-green-800 transform rotate-2 group-hover:rotate-4 transition-transform"></div>
+                <div className="relative flex flex-col justify-between rounded-[30px] border-4 border-green-800 bg-white p-6 transform -rotate-2 group-hover:rotate-0 transition-transform shadow-[8px_8px_0px_0px_rgba(22,101,52,1)]">
+                  <div className="space-y-4">
+                    <div className="flex text-yellow-400">
+                      <PiStarFill className="h-6 w-6 fill-current stroke-green-800 stroke-2" />
+                      <PiStarFill className="h-6 w-6 fill-current stroke-green-800 stroke-2" />
+                      <PiStarFill className="h-6 w-6 fill-current stroke-green-800 stroke-2" />
+                      <PiStarFill className="h-6 w-6 fill-current stroke-green-800 stroke-2" />
+                      <PiStarFill className="h-6 w-6 fill-current stroke-green-800 stroke-2" />
+                    </div>
+                    <div className="comic-bubble bg-green-100 border-4 border-green-800 p-4 rounded-[20px] relative">
+                      <p className="text-green-800 font-bold">
+                        "Profilimi AI önerileriyle tasarladım, markama çok uygun
+                        bir görünüm oldu!"
+                      </p>
+                      <div className="absolute -bottom-4 -left-4 w-8 h-8 bg-green-100 border-r-4 border-b-4 border-green-800 transform rotate-45"></div>
+                    </div>
+                  </div>
+                  <div className="flex items-center space-x-4 pt-4 mt-6">
+                    <div className="relative h-16 w-16 overflow-hidden rounded-full border-4 border-green-800 shadow-[4px_4px_0px_0px_rgba(22,101,52,1)]">
+                      <img
+                        src="https://placehold.co/64"
+                        width={64}
+                        height={64}
+                        alt="Mert Y."
+                        className="h-full w-full object-cover"
+                      />
+                    </div>
+                    <div>
+                      <p className="font-extrabold text-xl text-green-800">
+                        Mert Y.
                       </p>
                       <p className="text-green-700 font-bold">Founder</p>
                     </div>
@@ -309,9 +345,8 @@ function Home() {
                     </div>
                     <div className="comic-bubble bg-green-100 border-4 border-green-800 p-4 rounded-[20px] relative">
                       <p className="text-green-800 font-bold">
-                        "lorem ipsum lorem ipsum dolar sit amet lorem ipsum
-                        dolar sit amet lorem ipsum dolar sit amet lorem ipsum
-                        dolar sit amet lorem ipsum dolar sit amet"
+                        "Tıklama analizleri sayesinde hangi linklerimin popüler
+                        olduğunu öğrendim!"
                       </p>
                       <div className="absolute -bottom-4 -left-4 w-8 h-8 bg-green-100 border-r-4 border-b-4 border-green-800 transform rotate-45"></div>
                     </div>
@@ -322,54 +357,15 @@ function Home() {
                         src="https://placehold.co/64"
                         width={64}
                         height={64}
-                        alt="Kemal G."
+                        alt="Elif S."
                         className="h-full w-full object-cover"
                       />
                     </div>
                     <div>
                       <p className="font-extrabold text-xl text-green-800">
-                        Kemal G.
+                        Elif S.
                       </p>
-                      <p className="text-green-700 font-bold">Founder</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="group relative">
-                <div className="absolute inset-0 bg-green-300 rounded-[30px] border-4 border-green-800 transform rotate-2 group-hover:rotate-4 transition-transform"></div>
-                <div className="relative flex flex-col justify-between rounded-[30px] border-4 border-green-800 bg-white p-6 transform -rotate-2 group-hover:rotate-0 transition-transform shadow-[8px_8px_0px_0px_rgba(22,101,52,1)]">
-                  <div className="space-y-4">
-                    <div className="flex text-yellow-400">
-                      <PiStarFill className="h-6 w-6 fill-current stroke-green-800 stroke-2" />
-                      <PiStarFill className="h-6 w-6 fill-current stroke-green-800 stroke-2" />
-                      <PiStarFill className="h-6 w-6 fill-current stroke-green-800 stroke-2" />
-                      <PiStarFill className="h-6 w-6 fill-current stroke-green-800 stroke-2" />
-                      <PiStarFill className="h-6 w-6 fill-current stroke-green-800 stroke-2" />
-                    </div>
-                    <div className="comic-bubble bg-green-100 border-4 border-green-800 p-4 rounded-[20px] relative">
-                      <p className="text-green-800 font-bold">
-                        "lorem ipsum lorem ipsum dolar sit amet lorem ipsum
-                        dolar sit amet lorem ipsum dolar sit amet lorem ipsum
-                        dolar sit amet lorem ipsum dolar sit amet"
-                      </p>
-                      <div className="absolute -bottom-4 -left-4 w-8 h-8 bg-green-100 border-r-4 border-b-4 border-green-800 transform rotate-45"></div>
-                    </div>
-                  </div>
-                  <div className="flex items-center space-x-4 pt-4 mt-6">
-                    <div className="relative h-16 w-16 overflow-hidden rounded-full border-4 border-green-800 shadow-[4px_4px_0px_0px_rgba(22,101,52,1)]">
-                      <img
-                        src="https://placehold.co/64"
-                        width={64}
-                        height={64}
-                        alt="Kemal G."
-                        className="h-full w-full object-cover"
-                      />
-                    </div>
-                    <div>
-                      <p className="font-extrabold text-xl text-green-800">
-                        Kemal G.
-                      </p>
-                      <p className="text-green-700 font-bold">Founder</p>
+                      <p className="text-green-700 font-bold">İçerik Üretici</p>
                     </div>
                   </div>
                 </div>

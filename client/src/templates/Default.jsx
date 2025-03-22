@@ -6,7 +6,7 @@ import { RiTwitterXFill } from "react-icons/ri";
 import { FiInstagram } from "react-icons/fi";
 import { FaMedium, FaGithub } from "react-icons/fa";
 
-function Default() {
+function Default({ name, surname, bio, links, social }) {
   useEffect(() => {
     document.body.classList.add("defaultThemeBody");
   }, []);
@@ -21,86 +21,52 @@ function Default() {
           alt="avatar"
         />
         <div className="flex flex-col justify-center items-center">
-          <h1 className="text-2xl text-white">Kemal Gündoğdu</h1>
-          <p className="text-gray-200 text-md mt-1">Software Developer</p>
+          <h1 className="text-2xl text-white">{name+" "+surname}</h1>
+          <p className="text-gray-200 text-md mt-1">{bio}</p>
         </div>
       </div>
       {/* social media links */}
       <div className="flex items-center gap-7 mt-7 justify-center w-full flex-wrap">
-        <Link to={"https://instagram.com/kegundogdu"} target="_blank">
-          <FiInstagram className="text-2xl text-cyan-300 hover:text-white transition-colors" />
-        </Link>
-        <Link to={"https://twitter.com/kegundogdu"} target="_blank">
-          <RiTwitterXFill className="text-2xl text-cyan-300 hover:text-white transition-colors" />
-        </Link>
-        <Link to={"https://twitter.com/kegundogdu"} target="_blank">
-          <FaMedium className="text-2xl text-cyan-300 hover:text-white transition-colors" />
-        </Link>
-        <Link to={"https://twitter.com/kegundogdu"} target="_blank">
-          <FaGithub className="text-2xl text-cyan-300 hover:text-white transition-colors" />
-        </Link>
+        {/* social media links */}
+        {(social || []).map((item, index) => (
+          <Link key={index} to={item.link} target="_blank">
+            {item.icon === "twitter" && (
+              <RiTwitterXFill className="text-2xl text-cyan-300 hover:text-white transition-colors" />
+            )}
+            {item.icon === "medium" && (
+              <FaMedium className="text-2xl text-cyan-300 hover:text-white transition-colors" />
+            )}
+            {item.icon === "github" && (
+              <FaGithub className="text-2xl text-cyan-300 hover:text-white transition-colors" />
+            )}
+            {item.icon === "instagram" && (
+              <FiInstagram className="text-2xl text-cyan-300 hover:text-white transition-colors" />
+            )}
+          </Link>
+        ))}
       </div>
       {/* content */}
       <div className="mt-10">
-        <div className="flex flex-col gap-5 mt-5 w-full">
-          {/* title */}
-          <h1 className="text-md uppercase text-cyan-300 w-full text-center">
-            Useful Links
-          </h1>
-          {/* links */}
-          <Link
-            to={"https://roadmap.sh/"}
-            target="_blank"
-            className="text-cyan-700 bg-cyan-50 w-full text-center p-3 rounded-xl transition-all duration-300 hover:shadow-lg hover:bg-white"
-          >
-            Roadmap 🗺️
-          </Link>
-          <Link
-            to={"https://roadmap.sh/"}
-            target="_blank"
-            className="text-cyan-700 bg-cyan-50 w-full text-center p-3 rounded-xl transition-all duration-300 hover:shadow-lg hover:bg-white"
-          >
-            English Education 📚
-          </Link>
-          <Link
-            to={"https://roadmap.sh/"}
-            target="_blank"
-            className="text-cyan-700 bg-cyan-50 w-full text-center p-3 rounded-xl transition-all duration-300 hover:shadow-lg hover:bg-white"
-          >
-            Social Media Management Training 📚
-          </Link>
-          {/* title */}
-          <h1 className="text-md uppercase text-cyan-300 w-full text-center">
-            last posts
-          </h1>
-          {/* links */}
-          <Link
-            to={"https://roadmap.sh/"}
-            target="_blank"
-            className="text-cyan-700 bg-cyan-50 w-full text-center p-3 rounded-xl transition-all duration-300 hover:shadow-lg hover:bg-white"
-          >
-            Backend Learning 📚
-          </Link>
-          <Link
-            to={"https://roadmap.sh/"}
-            target="_blank"
-            className="text-cyan-700 bg-cyan-50 w-full text-center p-3 rounded-xl transition-all duration-300 hover:shadow-lg hover:bg-white"
-          >
-            First Expo Project 🚀
-          </Link>
-          {/* title */}
-          <h1 className="text-md uppercase text-cyan-300 w-full text-center">
-            show your support
-          </h1>
-          {/* links */}
-          <Link
-            to={"https://roadmap.sh/"}
-            target="_blank"
-            className="text-cyan-700 bg-cyan-50 w-full text-center p-3 rounded-xl transition-all duration-300 hover:shadow-lg hover:bg-white"
-          >
-            Buy me a coffee ☕
-          </Link>
-        </div>
+        {/* links */}
+        {(links || []).map((item, index) => (
+          <div className="flex flex-col gap-5 mt-5 w-full" key={index}>
+            {/* title */}
+            <h1 className="text-md uppercase text-cyan-300 w-full text-center">
+              {item.title}
+            </h1>
+            {/* links */}
+            {(item.items || []).map((link, index) => (
+              <Link
+                key={index}
+                to={link.url}
+                target="_blank"
+                className="text-cyan-700 bg-cyan-50 w-full text-center p-3 rounded-xl transition-all duration-300 hover:shadow-lg hover:bg-white"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
+        ))}
       </div>
     </div>
   );

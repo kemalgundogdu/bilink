@@ -3,7 +3,10 @@ import mongoose from "mongoose";
 const ProfileSchema = new mongoose.Schema(
   {
     userId: { type: String, required: true, unique: true },
+    name: { type: String, required: true },
+    surname: { type: String, required: true },
     username: { type: String, required: true, unique: true },
+    profilePicture: { type: String, default: "", required: true },
     socialMedias: { type: Array, required: true, default: [] },
     links: {
       type: [
@@ -27,7 +30,6 @@ const ProfileSchema = new mongoose.Schema(
     },
     theme: { type: String, required: true, default: "default" },
     bio: { type: String, max: 150 },
-    city: { type: String, max: 50 },
   },
   { timestamps: true }
 );

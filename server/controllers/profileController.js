@@ -18,8 +18,21 @@ export const oneProfile = async (req, res) => {
 // create profile
 export const createProfile = async (req, res) => {
   try {
-    const { socialMedias, links, theme, bio, city } = req.body;
-    if (!socialMedias || !links || !theme || !bio || !city)
+    const {
+      socialMedias,
+      links,
+      theme,
+      bio,
+      name,
+      surname,
+      profilePicture,
+    } = req.body;
+    if (
+      (!socialMedias || !links || !theme || !bio,
+      !name,
+      !surname,
+      !profilePicture)
+    )
       return res.status(400).json({ error: "All input is required" });
 
     const userId = req.user.id;
@@ -43,11 +56,13 @@ export const createProfile = async (req, res) => {
     const newProfile = new Profile({
       userId,
       username,
+      name,
+      surname,
+      profilePicture,
       socialMedias,
       links,
       theme,
       bio,
-      city,
     });
     await newProfile.save();
     res.status(201).json(newProfile);
